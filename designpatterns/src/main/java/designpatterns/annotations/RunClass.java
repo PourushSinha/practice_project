@@ -20,11 +20,6 @@ import java.util.Set;
  */
 
 
-@Target(ElementType.METHOD)
-@Retention(RetentionPolicy.RUNTIME)
-@interface AB {
-    String name() default "";
-}
 
 
 class WorkFlowExecutor <T> {
