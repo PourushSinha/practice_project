@@ -1,4 +1,4 @@
-package algorithm.matrix;
+package datastructutre.matrix;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -12,6 +12,7 @@
         <module>designpatterns</module>
         <module>algorithm</module>
         <module>java_concept</module>
+        <module>spring_concepts</module>
     </modules>
 
     <dependencies>
@@ -19,6 +20,16 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>4.2.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.4.RELEASE</version>
         </dependency>
     </dependencies>
 
