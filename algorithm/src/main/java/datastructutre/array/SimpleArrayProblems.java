@@ -24,7 +24,7 @@ public class SimpleArrayProblems {
 
     }
 
-
+//another approach https://www.hackerrank.com/rest/contests/master/challenges/2d-array/hackers/NKSkr/download_solution
     static int hourglassSum(int[][] arr) {
         Integer output=null;
 
@@ -34,6 +34,7 @@ public class SimpleArrayProblems {
                     Integer sum = sum(row, col, arr);
                     System.out.println(sum);
                     System.out.println("=========================");
+                    output =Math.max(sum,output);
                     if(output==null){
                         output = sum;
                     }

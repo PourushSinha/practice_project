@@ -12,7 +12,9 @@
         <module>designpatterns</module>
         <module>algorithm</module>
         <module>java_concept</module>
-        <module>spring_concepts</module>
+        <module>Spring_practice</module>
+        <module>vertex_concept</module>
+        <module>dropwizard_practice</module>
     </modules>
 
     <dependencies>
