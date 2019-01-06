@@ -2,6 +2,7 @@ package randomproblemsolving.basic;
 
 import com.google.common.collect.Maps;
 
+import java.math.BigInteger;
 import java.util.Map;
 
 /**
@@ -30,7 +31,9 @@ public class PairOfSocks {
 
     public static void main(String[] args) {
         int[] arr = {10,20,20,10,10,30,50,10,20};
-        System.out.println(sockMerchant(9,arr));
+        //System.out.println(sockMerchant(9,arr));
+        BigInteger f = new BigInteger("1");
+        System.out.println(BigInteger.valueOf(54));
 
     }
 }
