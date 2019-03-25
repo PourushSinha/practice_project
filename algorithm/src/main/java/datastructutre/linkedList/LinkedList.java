@@ -32,6 +32,8 @@ public class LinkedList {
         System.out.println("NULL");
     }
 
+
+
     public static void printList(Node node)
     {
         Node tnode = node;

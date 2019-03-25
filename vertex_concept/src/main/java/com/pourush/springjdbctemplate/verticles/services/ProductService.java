@@ -1,4 +1,4 @@
-package com.pourush.verticles.services;
+package com.pourush.springjdbctemplate.verticles.services;
 
 import io.vertx.core.Future;
 import io.vertx.ext.web.RoutingContext;

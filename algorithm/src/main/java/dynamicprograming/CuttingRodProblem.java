@@ -57,7 +57,7 @@ public class CuttingRodProblem {
         int length =8;
         System.out.println("Length of the rod "+length);
         System.out.println("Soulution with recursive call");
-        System.out.println(recursicve(length));
+        //System.out.println(recursicve(length));
         System.out.println("Soulution with DP call");
         System.out.println(cutRod(length));
     }

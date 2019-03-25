@@ -1,8 +1,7 @@
-package com.pourush.verticles;
+package com.pourush.springjdbctemplate.verticles;
 
 
 import io.vertx.core.AbstractVerticle;
-import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;

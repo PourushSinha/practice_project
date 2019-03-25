@@ -1,4 +1,4 @@
-package com.pourush.springtest;
+package com.pourush.springjdbctemplate.springtest;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
