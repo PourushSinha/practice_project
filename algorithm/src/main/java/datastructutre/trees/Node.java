@@ -249,5 +249,6 @@ public class Node {
         node1.postOrder(node1);
         System.out.println("\nBFS");
         breadthFirstSearch(node1);
+
     }
 }

@@ -12,7 +12,7 @@ import io.dropwizard.setup.Environment;
  */
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
     public static void main(String[] args) throws Exception {
-        new HelloWorldApplication().run(args);
+        new HelloWorldApplication().run("server",args[0]);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
     }
 
 
-
+    @Override
     public void run(HelloWorldConfiguration helloWorldConfiguration, Environment environment) throws Exception {
 
         final HelloWorldResource resource = new HelloWorldResource(
@@ -36,6 +36,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         final TemplateHealthCheck healthCheck =
                 new TemplateHealthCheck(helloWorldConfiguration.getTemplate());
         environment.healthChecks().register("template", healthCheck);
+        environment.lifecycle().manage(new ManageResources());
         environment.jersey().register(resource);
 
     }

@@ -26,9 +26,9 @@ public class BookItem extends Book {
         if(this.isReferenceOnly) {
             throw new Exception("This book is Reference only and can't be issued");
         }
-        if(!BookLending.lendBook(this.getBarcode(), memberId)){
+        /*if(!BookLending.lendBook(this.getBarcode(), memberId)){
             return false;
-        }
+        }*/
         this.updateBookItemStatus(CommonConstants.BookStatus.LOANED);
         return true;
     }

@@ -72,4 +72,56 @@ public class LeftRightRotationArray {
         return arr;
 
     }
+    static int[] rotLeft(int[] a, int d) {
+        int shifts;
+        if(a.length > d){
+            shifts = d;
+        }else{
+            shifts = d % a.length;
+        }
+        if(shifts==0){
+            return a;
+        }
+
+        int[] arr =new int[shifts];
+        for(int i=0; i< shifts ;i++){
+            arr[i] = a[i];
+        }
+
+        for(int i=shifts ,j=0 ;i<a.length;i++,j++){
+            a[j] = a[i];
+        }
+
+        for(int i=(a.length - shifts),j=0 ;i<a.length;i++,j++){
+            a[i] = arr[j];
+        }
+        return a;
+
+    }
+    static void minimumBribes(int[] q) {
+        int count=0;
+        for(int i= q.length -1 ;i >=0 ;i--){
+            if(q[i] != i+1){
+                if(i-1 >=0 && q[i-1] == i+1){
+                    count++;
+                }else if(i-2 >=0 && q[i-2] == i+1){
+                    count++;
+                    count++;
+                    int temp = q[i];
+                    q[i] =q[i -1];
+                    q[i - 1] = q[i -2];
+                    q[i - 2] =temp;
+                }else{
+                    System.out.println("Too chaotic");
+                }
+
+
+            }
+
+        }
+
+        System.out.println(count);
+
+
+    }
 }

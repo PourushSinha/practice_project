@@ -18,6 +18,7 @@
         <module>db_concept</module>
         <module>network_concepts</module>
         <module>system_design</module>
+        <module>kafka_practice</module>
     </modules>
 
     <dependencies>
