@@ -41,8 +41,9 @@ public class CoinChange {
                 //System.out.println("table["+j+"] = +    table["+(j - S[i])+"] ");
 
                 table[j] += table[j - coin];
-                System.out.print("table array == ");
+                System.out.print("table array//////////////////////////////////////////// == ");
                 CommonUtils.printArray(table);
+
             }
         }
 
@@ -56,8 +57,9 @@ public class CoinChange {
         for(int coin : coins){
             for(int i =coin ;i<=n ;i++){
                 coinsComabinationTable[i] += coinsComabinationTable[i - coin];
-                CommonUtils.printArray(coinsComabinationTable);
+
             }
+            CommonUtils.printArray(coinsComabinationTable);
             System.out.println();
         }
         return coinsComabinationTable[n];
@@ -67,8 +69,9 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-        int arr[] = {1,2,3 };
-        int n = 4;
+        //int arr[] = {1,2,3 };
+        int arr[] ={1,2,5,10};
+        int n = 12;
         /*int n = 250;
         int[] arr = {41,34,46,9,37,32,42,21,7,13,1,24,3,43,2,23,8,45,19,30,29,18,35,11};*/
 
