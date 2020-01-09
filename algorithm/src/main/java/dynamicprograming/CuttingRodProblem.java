@@ -36,21 +36,21 @@ public class CuttingRodProblem {
     //DP soloution
 
     public static int cutRod(int n){
-        int val[] =new int[n+1];
-        val[0] = 0;
+        int dpArray[] =new int[n+1];
+        dpArray[0] = 0;
         for (int i = 1 ; i <= n ; i++){
             int max_value =-1;
             System.out.println("rod of length  = "+i);
             for(int j = 0 ; j<i ; j++){
                 System.out.println("rod length = "+(j + 1)+"  and optimal solution of rod length ="+(i - j - 1));
-                System.out.println("      iteration j = "+j+" max_value "+max_value+" arr["+j+"] ="+arr[j]+" + (val["+i+" - "+j+" - 1])val["+(i - j - 1)+"]="+val[i - j - 1]+"===="+(arr[j] + val[i - j - 1]));
-                max_value =Math.max(max_value , arr[j] + val[i - j - 1]);
+                System.out.println("      iteration j = "+j+" max_value "+max_value+" arr["+j+"] ="+arr[j]+" + (dpArray["+i+" - "+j+" - 1])dpArray["+(i - j - 1)+"]="+dpArray[i - j - 1]+"===="+(arr[j] + dpArray[i - j - 1]));
+                max_value =Math.max(max_value , arr[j] + dpArray[i - j - 1]);
                 System.out.println("final max value = "+max_value);
             }
-            val[i] = max_value;
-            System.out.println(Arrays.toString(val));
+            dpArray[i] = max_value;
+            System.out.println(Arrays.toString(dpArray));
         }
-        return val[n];
+        return dpArray[n];
     }
 
     public static void main(String[] args) {

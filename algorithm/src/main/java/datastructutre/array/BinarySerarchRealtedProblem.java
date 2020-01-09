@@ -11,7 +11,7 @@ public class BinarySerarchRealtedProblem {
     static int searchInitialAndFinalIndex(int[] arr ,int n){
 
         int l=0;
-        int r =arr.length -1;
+        int r = arr.length -1;
         Integer initial =null;
         Integer end =null;
 

@@ -14,7 +14,7 @@ public class SwapElementsInArray {
             sum += X[i];
         return sum;
     }
-
+    // sumA - a + b   = sumB - b + a
     // Function to calculate : a - b = (sumA - sumB) / 2
     static int getTarget(int A[], int n, int B[], int m)
     {

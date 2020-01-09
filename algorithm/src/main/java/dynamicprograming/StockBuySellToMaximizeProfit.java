@@ -71,5 +71,28 @@ public class StockBuySellToMaximizeProfit {
         System.out.println("Max value == "+ maxProfit(arr.length));
         System.out.println("Non recursive");
         System.out.println("Max value =="+maxProfitNonRecursive(arr));
+
+        System.out.println("Max value practice =="+run(arr.length,arr));
+    }
+
+
+
+
+
+
+
+    //********************Practice*********************
+
+    public static int run(int i, int[] arr){
+
+        if(i==0){
+            return 0;
+        }
+
+        int sum = run(i-1,arr);
+        for(int j=0; j<i ;j++){
+            sum = Math.max(sum , arr[i-1] -arr[j]);
+        }
+        return sum;
     }
 }

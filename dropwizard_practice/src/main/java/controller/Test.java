@@ -6,6 +6,9 @@ package controller;
 public class Test {
 
     public static void main(String[] args) {
+        double check =0.0;
+        int var =(int)check;
+        System.out.print(var);
 
     }
 }

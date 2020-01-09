@@ -4,6 +4,8 @@ import com.google.common.collect.Maps;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Created by pourush.sinha on 29/12/18.
@@ -74,6 +76,7 @@ public class NonDivisibleSubset {
     }
 
     public static void main(String[] args) {
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);
         int[] S ={1,7,2,4};
         int k =3;
         /*int[] S ={19,10,12,10,24,25,22};

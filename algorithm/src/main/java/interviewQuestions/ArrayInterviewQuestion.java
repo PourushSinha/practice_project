@@ -1,13 +1,17 @@
 package interviewQuestions;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
+
 import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
+
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * Created by pourush.sinha on 14/06/19.
@@ -129,7 +133,7 @@ public class ArrayInterviewQuestion {
     }
 
     public static void maxArea(){
-        int[] arr ={3, 1, 2, 4, 5};
+        int[] arr ={6, 2, 5, 4, 5, 1, 6};
 
         int left =0;
         int right = arr.length-1;
@@ -333,7 +337,9 @@ public class ArrayInterviewQuestion {
 
 
     public static void main(String[] args) {
+         System.out.print("checktryCatch" +checkTryCatch() );
         ////Sum of the  3 elements in an accending array
+
         check3ElementSumInArray();
         fourSum();
         threeSumClosest();
@@ -360,6 +366,10 @@ public class ArrayInterviewQuestion {
 
         ArrayInterviewQuestion arrayInterviewQuestion = new ArrayInterviewQuestion();
         arrayInterviewQuestion.weightedJobSchedulingMaximumProfit();
+        System.out.println("****************************************");
+        System.out.println(kthMostFrequentChar("aabcd",2));
+        int numb = minimumNumber();
+        System.out.println(numb);
     }
 
     private static void findNumberInRightRotatedArray() {
@@ -398,6 +408,83 @@ public class ArrayInterviewQuestion {
 
 
     }
+
+    public static String checkTryCatch(){
+         try{
+             return "try";
+
+         }catch (Exception e){
+
+         }finally {
+             return "finaly";
+         }
+
+    }
+
+    private static String kthMostFrequentChar(String S, int K) {
+
+        Map<Integer, Long> counts = S.chars()
+                .boxed()
+                .collect(Collectors.groupingBy(
+                        Function.identity(),
+                        Collectors.counting()
+                ));
+         counts.entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()));
+         System.out.println(counts);
+         Long val1 = counts.get(counts.keySet().toArray()[0]);
+         counts.remove(counts.keySet().toArray()[0]);
+        for (Integer i:counts.keySet()){
+             Long val =counts.get(i);
+             if(val1 != val){
+                 K--;
+             }
+            val1=val;
+             if(K==1){
+                 return Character.toString((char)i.intValue());
+             }
+
+
+
+            
+        }
+
+         return "-1";
+
+
+    }
+
+    private static int minimumNumber(){
+        int number = 12045;
+        int n = 10;
+        int min = number;
+        int temp = number;
+        while(temp != 0){
+            int tempo = number;
+            int currentNumber = 0;
+            if(n == 10){
+                currentNumber = tempo/10;
+                if(currentNumber < min){
+                    min = currentNumber;
+                }
+            }
+            else{
+                currentNumber = (tempo/n) * 10 + (tempo % (n/10));
+                System.out.println("Current Number : " + currentNumber);
+                if(currentNumber < min){
+                    min = currentNumber;
+                }
+            }
+            System.out.println("Min : " + min + " iteration : " + n + " temp : " + temp);
+            n = n * 10;
+            temp = temp/10;
+        }
+        System.out.println("Minimum number - " + min);
+
+        return min;
+    }
+
 
 
 }
